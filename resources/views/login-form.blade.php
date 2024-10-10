@@ -159,13 +159,16 @@
             <div class="col-md-5">
                 <div class="card login-card">
                     <div class="card-header">
-                        <h3>Welcome Back</h3>
-                        <p>Please login to your account</p>
-                        @if (session('from'))
-                            <div class="alert alert-info">
-                                Kamu berasal dari {{ session('from') }}
-                            </div>
+                        <h3>Welcome Back </h3>
+                        @if (session('username'))
+                            <b>{{ session('username') }}</b>
                         @endif
+
+
+
+
+                        <p>Please login to your account</p>
+
                     </div>
                     <div class="card-body">
                         @if ($errors->any())
@@ -177,6 +180,17 @@
                                 </ul>
                             </div>
                         @endif
+                        @if (session('from'))
+                            <div class="alert alert-success text-center">
+                                Login {{ session('from') }}
+                            </div>
+                        @elseif (session('from'))
+                            <div class="alert alert-danger text-center">
+                                login {{ session('from') }}
+                            </div>
+                        @endif
+
+
                         @if (isset($result))
                             @if ($result == 'success')
                                 <div class="alert alert-success text-center">Login Berhasil</div>

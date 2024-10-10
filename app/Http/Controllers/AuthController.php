@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -79,13 +82,19 @@ class AuthController extends Controller
         if($request->username=='2357301096A' &&
         $request->password=='2357301096A'){
             $result= 'success';
+
+            session([
+                'username'=>$request->username,
+                'last_login' => date('Y-m-d H:i:s')
+            ]);
         }else{
+            Session::flush();
             $result = 'error';
         }
 
-        $pageData['result'] = $result;
+        // $pageData['result'] = $result;
 
-        return view('login-form', $pageData);
+        return redirect()->route('halaman-login')->with('from', $result);
     }
 
 

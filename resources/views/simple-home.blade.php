@@ -100,6 +100,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">About Our Application</h5>
+
+                        <img src="{{asset('assets/img/dino.jpg')}}" alt="">
                         <p class="card-text">Our application provides a clean and intuitive interface, allowing users to
                             navigate easily and perform tasks efficiently. Built with Laravel and Bootstrap, it offers
                             flexibility and responsiveness.</p>
