@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PercobaanController;
 use App\Http\Controllers\PinjamBukuController;
 
@@ -95,3 +97,13 @@ Route::get('/auth', [AuthController::class,'index'])->name('halaman-login');
 Route::post('/auth/login', [AuthController::class,'login'])->name('login');
 
 Route::get('/home/{param1}', [HomeController::class,'redirectTo']);
+
+Route::get('/auth', [AuthController::class,'index'])->name('halaman-login');
+
+route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+route::get('pelanggan', [PelangganController::class, 'index'])->name('pelanggan.list');
+
+route::get('pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
+
+Route::post('pelanggan/store', [PelangganController::class, 'store'])->name('pelanggan.store');
