@@ -372,21 +372,21 @@
 
 
 {{--Form Section--}}
+
 <div class="card card-body border-0 shadow mb-4">
-    <h2 class="h5 mb-4"></h2>
     <form action="{{route('pelanggan.store')}}" method="POST">
         @csrf
         <div class="row">
             <div class="col-md-6 mb-3">
                 <div>
                     <label for="first_name">First Name</label>
-                    <input class="form-control" id="first_name" type="text" placeholder="Enter your first name" required="">
+                    <input class="form-control" id="first_name" name="first_name" type="text" placeholder="Enter your first name" required="">
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <div>
                     <label for="last_name">Last Name</label>
-                    <input class="form-control" id="last_name" type="text" placeholder="Also your last name" required="">
+                    <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Also your last name" required="">
                 </div>
             </div>
         </div>
@@ -397,12 +397,12 @@
                     <span class="input-group-text">
                         <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                     </span>
-                    <input data-datepicker="" class="form-control datepicker-input" id="birthday" type="text" placeholder="dd/mm/yyyy" required=""><div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-bottom" style="left: 341px; top: 375px;"><div class="datepicker-picker"><div class="datepicker-header"><div class="datepicker-title" style="display: none;"></div><div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">October 2024</button><button type="button" class="btn next-btn">»</button></div></div><div class="datepicker-main"><div class="datepicker-view"><div class="days"><div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div><div class="datepicker-grid"><span class="datepicker-cell day prev" data-date="1727542800000">29</span><span class="datepicker-cell day prev" data-date="1727629200000">30</span><span class="datepicker-cell day" data-date="1727715600000">1</span><span class="datepicker-cell day" data-date="1727802000000">2</span><span class="datepicker-cell day" data-date="1727888400000">3</span><span class="datepicker-cell day" data-date="1727974800000">4</span><span class="datepicker-cell day" data-date="1728061200000">5</span><span class="datepicker-cell day" data-date="1728147600000">6</span><span class="datepicker-cell day" data-date="1728234000000">7</span><span class="datepicker-cell day" data-date="1728320400000">8</span><span class="datepicker-cell day" data-date="1728406800000">9</span><span class="datepicker-cell day" data-date="1728493200000">10</span><span class="datepicker-cell day" data-date="1728579600000">11</span><span class="datepicker-cell day" data-date="1728666000000">12</span><span class="datepicker-cell day" data-date="1728752400000">13</span><span class="datepicker-cell day" data-date="1728838800000">14</span><span class="datepicker-cell day focused" data-date="1728925200000">15</span><span class="datepicker-cell day" data-date="1729011600000">16</span><span class="datepicker-cell day" data-date="1729098000000">17</span><span class="datepicker-cell day" data-date="1729184400000">18</span><span class="datepicker-cell day" data-date="1729270800000">19</span><span class="datepicker-cell day" data-date="1729357200000">20</span><span class="datepicker-cell day" data-date="1729443600000">21</span><span class="datepicker-cell day" data-date="1729530000000">22</span><span class="datepicker-cell day" data-date="1729616400000">23</span><span class="datepicker-cell day" data-date="1729702800000">24</span><span class="datepicker-cell day" data-date="1729789200000">25</span><span class="datepicker-cell day" data-date="1729875600000">26</span><span class="datepicker-cell day" data-date="1729962000000">27</span><span class="datepicker-cell day" data-date="1730048400000">28</span><span class="datepicker-cell day" data-date="1730134800000">29</span><span class="datepicker-cell day" data-date="1730221200000">30</span><span class="datepicker-cell day" data-date="1730307600000">31</span><span class="datepicker-cell day next" data-date="1730394000000">1</span><span class="datepicker-cell day next" data-date="1730480400000">2</span><span class="datepicker-cell day next" data-date="1730566800000">3</span><span class="datepicker-cell day next" data-date="1730653200000">4</span><span class="datepicker-cell day next" data-date="1730739600000">5</span><span class="datepicker-cell day next" data-date="1730826000000">6</span><span class="datepicker-cell day next" data-date="1730912400000">7</span><span class="datepicker-cell day next" data-date="1730998800000">8</span><span class="datepicker-cell day next" data-date="1731085200000">9</span></div></div></div></div><div class="datepicker-footer"><div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none;">Today</button><button type="button" class="btn clear-btn" style="display: none;">Clear</button></div></div></div></div>
+                    <input data-datepicker="" class="form-control datepicker-input" id="birthday" name="birthday" type="text" placeholder="dd/mm/yyyy" required=""><div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-bottom" style="left: 341px; top: 375px;"><div class="datepicker-picker"><div class="datepicker-header"><div class="datepicker-title" style="display: none;"></div><div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">October 2024</button><button type="button" class="btn next-btn">»</button></div></div><div class="datepicker-main"><div class="datepicker-view"><div class="days"><div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div><div class="datepicker-grid"><span class="datepicker-cell day prev" data-date="1727542800000">29</span><span class="datepicker-cell day prev" data-date="1727629200000">30</span><span class="datepicker-cell day" data-date="1727715600000">1</span><span class="datepicker-cell day" data-date="1727802000000">2</span><span class="datepicker-cell day" data-date="1727888400000">3</span><span class="datepicker-cell day" data-date="1727974800000">4</span><span class="datepicker-cell day" data-date="1728061200000">5</span><span class="datepicker-cell day" data-date="1728147600000">6</span><span class="datepicker-cell day" data-date="1728234000000">7</span><span class="datepicker-cell day" data-date="1728320400000">8</span><span class="datepicker-cell day" data-date="1728406800000">9</span><span class="datepicker-cell day" data-date="1728493200000">10</span><span class="datepicker-cell day" data-date="1728579600000">11</span><span class="datepicker-cell day" data-date="1728666000000">12</span><span class="datepicker-cell day" data-date="1728752400000">13</span><span class="datepicker-cell day" data-date="1728838800000">14</span><span class="datepicker-cell day" data-date="1728925200000">15</span><span class="datepicker-cell day" data-date="1729011600000">16</span><span class="datepicker-cell day focused" data-date="1729098000000">17</span><span class="datepicker-cell day" data-date="1729184400000">18</span><span class="datepicker-cell day" data-date="1729270800000">19</span><span class="datepicker-cell day" data-date="1729357200000">20</span><span class="datepicker-cell day" data-date="1729443600000">21</span><span class="datepicker-cell day" data-date="1729530000000">22</span><span class="datepicker-cell day" data-date="1729616400000">23</span><span class="datepicker-cell day" data-date="1729702800000">24</span><span class="datepicker-cell day" data-date="1729789200000">25</span><span class="datepicker-cell day" data-date="1729875600000">26</span><span class="datepicker-cell day" data-date="1729962000000">27</span><span class="datepicker-cell day" data-date="1730048400000">28</span><span class="datepicker-cell day" data-date="1730134800000">29</span><span class="datepicker-cell day" data-date="1730221200000">30</span><span class="datepicker-cell day" data-date="1730307600000">31</span><span class="datepicker-cell day next" data-date="1730394000000">1</span><span class="datepicker-cell day next" data-date="1730480400000">2</span><span class="datepicker-cell day next" data-date="1730566800000">3</span><span class="datepicker-cell day next" data-date="1730653200000">4</span><span class="datepicker-cell day next" data-date="1730739600000">5</span><span class="datepicker-cell day next" data-date="1730826000000">6</span><span class="datepicker-cell day next" data-date="1730912400000">7</span><span class="datepicker-cell day next" data-date="1730998800000">8</span><span class="datepicker-cell day next" data-date="1731085200000">9</span></div></div></div></div><div class="datepicker-footer"><div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none;">Today</button><button type="button" class="btn clear-btn" style="display: none;">Clear</button></div></div></div></div>
                  </div>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="gender">Gender</label>
-                <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                <select class="form-select mb-0" id="gender" name="gender" aria-label="Gender select example">
                     <option selected="">Gender</option>
                     <option value="1">Female</option>
                     <option value="2">Male</option>
@@ -413,13 +413,13 @@
             <div class="col-md-6 mb-3">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input class="form-control" id="email" type="email" placeholder="name@company.com" required="">
+                    <input class="form-control" id="email" name="email" type="email" placeholder="name@company.com" required="">
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input class="form-control" id="phone" type="number" placeholder="+12-345 678 910" required="">
+                    <input class="form-control" id="phone" name="phone" type="number" placeholder="+12-345 678 910" required="">
                 </div>
             </div>
         </div>
@@ -429,6 +429,7 @@
         </div>
     </form>
 </div>
+
 
         <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
             <div class="row">

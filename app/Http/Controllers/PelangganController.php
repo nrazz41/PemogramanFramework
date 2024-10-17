@@ -31,7 +31,7 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
@@ -39,7 +39,7 @@ class PelangganController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
