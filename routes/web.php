@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MitraController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\DashboardController;
@@ -107,3 +109,44 @@ route::get('pelanggan', [PelangganController::class, 'index'])->name('pelanggan.
 route::get('pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
 
 Route::post('pelanggan/store', [PelangganController::class, 'store'])->name('pelanggan.store');
+
+Route::get('pelanggan/edit/{param1}', [PelangganController::class, 'edit'])->name('pelanggan.edit');
+
+Route::post('pelanggan/{param1}/update', [PelangganController::class, 'update'])->name('pelanggan.update');
+
+Route::get('/pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.destroy');
+
+
+Route::get('mitra', [MitraController::class, 'index'])->name('mitra.list');
+
+Route::get('buat', [MitraController::class, 'create'])->name('mitra.create');
+
+Route::post('str', [MitraController::class, 'store'])->name('mitra.store');
+
+Route::get('/edit/{param1}', [MitraController::class, 'edit'])->name('mitra.edit');
+
+Route::get('/delete/{param1}', [MitraController::class, 'destroy'])->name('mitra.destroy');
+
+Route::post('/mitra/update/{id}', [MitraController::class, 'update'])->name('mitra.update');
+
+
+Route::get('/authadmin', [AuthController::class,'loginview'])->name('login.admin');
+
+Route::post('/auth/loginadmin',[AuthController::class, 'loginadmin'])->name('login.dashboard');
+
+route::get('produk', [ProdukController::class, 'index'])->name('produk.list');
+
+route::get('buatproduk', [ProdukController::class, 'create'])->name('produk.create');
+
+route::post('strproduk', [ProdukController::class, 'store'])->name('produk.store');
+
+route::get('/editproduk/{param1}', [ProdukController::class, 'edit'])->name('produk.edit');
+
+route::get('/deleteproduk/{param1}', [ProdukController::class, 'destroy'])->name('produk.destroy');
+
+route::post('/produk/update/{id}', [ProdukController::class, 'update'])->name('produk.update');
+
+
+
+route::get('/auth/forgot', [AuthController::class,'forgot'])->name('auth.forgot');
+route::post('/auth/forgot/vali', [AuthController::class,'forgotvali'])->name('auth.vali');

@@ -18,7 +18,7 @@
                 </nav>
                 <h2 class="h4">Data Pelanggan</h2>
 
-                <p class="mb-0">List daftar pelanggan.</p>
+                <p class="mb-0">List daftar pelanggan yang menggunakan jasa Hengker.</p>
                 @if (session('success'))
                     <div class="notification">
                         {{ session('success') }}

@@ -9,15 +9,16 @@ class Pelanggan extends Model
 {
     use HasFactory;
 
-    protected $primatyKey = 'pelanggan_)id';
+    protected $primaryKey = 'pelanggan_id'; // Corrected here
     protected $table = 'pelanggan';
 
+    public $timestamps = false; 
     protected $fillable = [
         'first_name',
         'last_name',
-        'bithday',
+        'birthday',
         'gender',
         'email',
-        'phopne',
+        'phone',
     ];
 }
